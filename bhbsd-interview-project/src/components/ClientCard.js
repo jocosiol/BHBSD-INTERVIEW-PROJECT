@@ -1,18 +1,16 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-function ClientCard() {
+function ClientCard(props) {
   return (
     <Card sx={{ maxWidth: 200, backgroundColor: "black" }}>
       <CardMedia
         component="img"
         height="200"
-        image="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+        image={props.client.speaker_head_shot_to_display}
         alt="profilepic"
       />
       <CardContent>
@@ -23,7 +21,7 @@ function ClientCard() {
           variant="h6"
           component="div"
         >
-          Full Name
+          {props.client.firstname} {props.client.lastname}
         </Typography>
         <Typography
           sx={{ color: "red" }}
@@ -31,7 +29,7 @@ function ClientCard() {
           variant="body2"
           color="text.secondary"
         >
-          Client's Company
+          {props.client.company}
         </Typography>
       </CardContent>
     </Card>

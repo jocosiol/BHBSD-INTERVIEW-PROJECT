@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 
-function ClientDetails() {
+function ClientDetails(props) {
   return (
     <div>
       <Box
@@ -27,24 +27,19 @@ function ClientDetails() {
         }}
       >
         <Typography id="modal-modal-title" variant="h6" component="h2">
-          Full Name
+          {props.client.firstname} {props.client.lastname}
         </Typography>
         <Typography id="modal-modal-title" variant="h6" component="h2">
-          Position in Company
+          {props.client.jobtitle}
         </Typography>
         <CardMedia
           component="img"
           sx={{ maxWidth: 200 }}
-          image="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+          image={props.client.speaker_head_shot_to_display}
           alt="profilepic"
         />
-        <Typography id="modal-modal-description" sx={{ mt: 2 }} align="justify" >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-          ullamcorper eleifend lacinia. Pellentesque sed mauris mollis, finibus
-          mauris gravida, porttitor orci. Nulla tincidunt lectus arcu, porta
-          congue arcu porttitor id. Sed mauris magna, dignissim et fringilla
-          sed, consectetur non eros. Integer auctor gravida mi. Curabitur
-          feugiat nulla ante, et fringilla justo tristique a.
+        <Typography id="modal-modal-description" sx={{ mt: 2 }} align="justify">
+          {props.client.bio}
         </Typography>
       </Box>
     </div>
