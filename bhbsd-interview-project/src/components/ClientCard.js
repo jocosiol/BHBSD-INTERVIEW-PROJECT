@@ -15,7 +15,7 @@ function ClientCard() {
           component="img"
           height="200"
           image="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
-          alt="green iguana"
+          alt="profilepic"
         />
         <CardContent>
           <Typography sx={{color: "white"}} align="left" gutterBottom variant="h6" component="div">
