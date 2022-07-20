@@ -4,13 +4,9 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import * as React from "react";
 import { useState, useEffect } from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
+import { Box, Grid, Typography, ButtonBase, Modal } from "@mui/material/";
 import ClientCard from "./components/ClientCard";
 import ClientDetails from "./components/ClientDetails";
-import ButtonBase from "@mui/material/ButtonBase";
-import Modal from "@mui/material/Modal";
 
 function App() {
   const [error, setError] = useState(null);
@@ -54,7 +50,7 @@ function App() {
   } else if (!isLoaded) {
     return (
       <Typography
-        sx={{ color: "white", marginTop: 10}}
+        sx={{ color: "white", marginTop: 10 }}
         variant="h4"
         gutterBottom
         component="div"
